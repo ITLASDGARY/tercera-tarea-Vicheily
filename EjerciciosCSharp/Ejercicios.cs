@@ -23,9 +23,18 @@ namespace EjerciciosCSharp
             string resultado = "";
             
             // TU CÓDIGO AQUÍ
-            
-            return resultado;
+             for (int i = 1; i <= 12; i++)
+        {
+            resultado += numero + " x " + i + " = " + (numero * i) + "\n";
         }
+
+        return resultado;
+     
+        }
+
+
+
+
 
         /// <summary>
         /// Ejercicio 2: Validador de Contraseña
@@ -49,9 +58,21 @@ namespace EjerciciosCSharp
             string entrada = "";
             
             // TU CÓDIGO AQUÍ (usa do-while)
+            do
+            {
+                entrada = obtenerInput();
+                intentos++;
+                
+            }
+            
+            while (entrada != claveSecreta);
             
             return intentos;
         }
+
+
+
+
 
         /// <summary>
         /// Ejercicio 3: Suma Acumulativa
@@ -73,9 +94,25 @@ namespace EjerciciosCSharp
             int suma = 0;
             
             // TU CÓDIGO AQUÍ (usa while o foreach con break)
+            foreach (int numero in numeros)
+            {
+                if (numero == 0)
+                {
+
+                break;
+
+                }
+                
+                suma += numero;
+            }
             
             return suma;
         }
+
+
+
+
+
 
         /// <summary>
         /// Ejercicio 4: El Contador de Pares
@@ -96,8 +133,22 @@ namespace EjerciciosCSharp
             string resultado = "";
             
             // TU CÓDIGO AQUÍ (usa for con i+=2)
-            
+            for (int i = 0; i <= 50; i += 2)
+            {
+
+                if (i > 0)    
+                {
+                    
+                    resultado += ", ";
+                    
+                }
+                
+                resultado += i;
+                
+            }
+        
             return resultado;
+            
         }
     }
 }
